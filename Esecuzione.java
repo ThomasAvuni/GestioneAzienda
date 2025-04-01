@@ -4,7 +4,7 @@ public class Esecuzione {
         t.setMS(120);
         t.start();
         while (true) {
-            System.out.println(ThreadTempo.getSecondi());
+            System.out.println(ThreadTempo.getTempo());
         }
     }
 }
