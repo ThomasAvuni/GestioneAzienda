@@ -1,19 +1,19 @@
 public class Node {
-    private Appuntamento m_Dati;
-    private Node m_Link;
+    private Appuntamento Dati;
+    private Node Link;
 
     public Node(Appuntamento dati){
-        m_Dati = dati;
-        m_Link = null;
+        Dati = dati;
+        Link = null;
     }
     public Appuntamento getDati (){
-        return m_Dati;
+        return Dati;
     }
     public void setLink (Node link){
-        m_Link = link;
+        Link = link;
     }
     public Node getLink (){
-        return m_Link;
+        return Link;
     }
 
 }

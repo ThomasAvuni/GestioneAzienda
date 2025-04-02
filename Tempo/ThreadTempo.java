@@ -1,56 +1,58 @@
 public class ThreadTempo extends Thread{
-    private int m_ms;
-    private static int m_secondi;
-    private static int m_Minuti;
-    private static int m_Ora;
-    private int m_msThread;
+    //Attrubuti della classe
+    private int ms;
+    private static int secondi;
+    private static int Minuti;
+    private static int Ora;
     public ThreadTempo(){
         super();
     }
 
-    public void setMS(int ms){
-        m_msThread = ms;
-    }
-
+    //Getter
     public static int getSecondi(){
-        return m_secondi;
+        return secondi;
     }
     
     public static int getMinuti(){
-        return m_Minuti;
+        return Minuti;
     }
 
     public static int getOra(){
-        return m_Ora;
+        return Ora;
     }
-
 
     public static String getTempo() {
         return "[" + getOra() + ":" + getMinuti() + ":" + getSecondi() + "]";
     }
 
+    //Funzione che calcola minuti, secondi e ore
     @Override
     public void run() {
+        //Richiamare il metodo run della superclasse
         super.run();
         while(true){
-            m_ms++;
-            if(m_ms >= 10){
-                m_secondi++;
-                m_ms = 0;
+            //Incremento i millisecondi
+            ms++;
+            //Quando i millisecondi sono maggiori di 10 si incrementano i secondi
+            if(ms >= 10){
+                secondi++;
+                ms = 0;
             }
-            
-            if(m_secondi >= 30){
-                m_Minuti++;
-                m_secondi = 0;
-            }
-
-            if(m_Minuti >= 30){
-                m_Ora++;
-                m_Minuti = 0;
+            //Se i secondi sono maggiori di 30 si incrementano i minuti
+            if(secondi >= 30){
+                Minuti++;
+                secondi = 0;
             }
 
+            //Se i minuti sono maggiori di 30 si incrementano le ore
+            if(Minuti >= 30){
+                Ora++;
+                Minuti = 0;
+            }
+
+            //Fermare il thread ogni 120 millisecondi
             try {
-                Thread.sleep(m_msThread);
+                Thread.sleep(120);
             } catch (InterruptedException e) {
 
             }
