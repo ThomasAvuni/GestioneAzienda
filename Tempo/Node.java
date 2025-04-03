@@ -1,12 +1,12 @@
 public class Node {
-    private Appuntamento Dati;
+    private Prenotazione Dati;
     private Node Link;
 
-    public Node(Appuntamento dati){
+    public Node(Prenotazione dati){
         Dati = dati;
         Link = null;
     }
-    public Appuntamento getDati (){
+    public Prenotazione getDati (){
         return Dati;
     }
     public void setLink (Node link){
