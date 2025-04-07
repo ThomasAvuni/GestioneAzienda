@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Esecuzione {
+public class Azienda {
     public void Esegui(){
         ThreadTempo t = new ThreadTempo();
         t.start();

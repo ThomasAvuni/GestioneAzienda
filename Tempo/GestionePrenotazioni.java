@@ -95,4 +95,8 @@ public class GestionePrenotazioni {
             return;
     }
 
+    public int getNumeroPrenotazioni() {
+        return numeroPrenotazioni;
+    }
+
 }

@@ -24,7 +24,10 @@ public class Prenotazione {
     }
 
     public boolean isEqual(Prenotazione p){
-        
+        if(this.getNome().equals(p.getNome()) && this.getCognome().equals(p.getCognome()) && this.getDataAppuntamento().equals(p.getDataAppuntamento())){
+            return true;
+        }
+        return false;
     }
 
     //Funzione che controlla se un appuntamento 'a' viene prima di un altro
