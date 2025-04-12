@@ -20,7 +20,7 @@ public class Data {
         minuti = min;
     }
 
-    //Costruttor senza ore e minuti
+    //Costruttore senza ore e minuti
     public Data(int g, int m, int a){
         giorno = g;
         mese = m;
